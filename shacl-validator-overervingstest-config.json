@@ -1,6 +1,6 @@
 {
   "Test": {
-    "location": "https://users.ugent.be/~mavbraba/shacl/overervingshacl-SHACLs.ttl",
+    "location": "https://users.ugent.be/~mavbraba/shacl/overervingshacl-SHACL.ttl",
     "dependencies": ["https://users.ugent.be/~mavbraba/shacl/overervingshacl-voc.ttl"]
   },
   "TestSolution4": {
