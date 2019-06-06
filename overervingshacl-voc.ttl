@@ -1,0 +1,268 @@
+@prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix eu: <http://data.europa.eu/m8g/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix sat: <http://data.europa.eu/stateaidtransparency/sat#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/overervingshacl#a1> a owl:DatatypeProperty ;
+    rdfs:label "Attribuut a1"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:domain <http://www.example.com/overervingshacl#A1> ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:range xsd:integer .
+
+<http://www.example.com/overervingshacl#a2> a owl:DatatypeProperty ;
+    rdfs:label "Attribuut a2"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:domain <http://www.example.com/overervingshacl#A2> ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:range xsd:integer .
+
+<http://www.example.com/overervingshacl#a3> a owl:DatatypeProperty ;
+    rdfs:label "Attribuut a3"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:domain <http://www.example.com/overervingshacl#A3> ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:range xsd:integer .
+
+<http://www.example.com/overervingshacl#b1> a owl:DatatypeProperty ;
+    rdfs:label "Attribuut b1"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:domain <http://www.example.com/overervingshacl#B1> ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:range xsd:integer .
+
+<http://www.example.com/overervingshacl#b2> a owl:DatatypeProperty ;
+    rdfs:label "Attribuut b2"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:domain <http://www.example.com/overervingshacl#B2> ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:range xsd:integer .
+
+<http://www.example.com/overervingshacl#b3> a owl:DatatypeProperty ;
+    rdfs:label "Attribuut b3"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:domain <http://www.example.com/overervingshacl#B3> ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:range xsd:integer .
+
+<http://www.example.com/overervingshacl#heeftB1> a owl:ObjectProperty ;
+    rdfs:label "heeft B1"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:domain <http://www.example.com/overervingshacl#A1> ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:range <http://www.example.com/overervingshacl#B1> .
+
+<http://www.example.com/overervingshacl#heeftB2> a owl:ObjectProperty ;
+    rdfs:label "heeft B2"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:domain <http://www.example.com/overervingshacl#A2> ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:range <http://www.example.com/overervingshacl#B2> .
+
+<http://www.example.com/overervingshacl#heeftB3> a owl:ObjectProperty ;
+    rdfs:label "heeft B3"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:domain <http://www.example.com/overervingshacl#A3> ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:range <http://www.example.com/overervingshacl#B3> .
+
+<http://www.example.com/overervingshacl#A3> a owl:Class ;
+    rdfs:label "Klasse A3"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:subClassOf <http://www.example.com/overervingshacl#A2> .
+
+<http://www.example.com/overervingshacl#B1> a owl:Class ;
+    rdfs:label "Klasse B1"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> .
+
+<http://www.example.com/overervingshacl#B2> a owl:Class ;
+    rdfs:label "Klasse B2"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> .
+
+<http://www.example.com/overervingshacl#B3> a owl:Class ;
+    rdfs:label "Klasse B3"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> .
+
+<http://www.example.com/overervingshacl#A1> a owl:Class ;
+    rdfs:label "Klasse A1"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> .
+
+<http://www.example.com/overervingshacl#A2> a owl:Class ;
+    rdfs:label "Klasse A2"@nl ;
+    vann:usageNote "Usage note etc."@nl ;
+    rdfs:comment "Definitie etc."@nl ;
+    rdfs:isDefinedBy <http://www.example.com/overervingshacl> ;
+    rdfs:subClassOf <http://www.example.com/overervingshacl#A1> .
+
+<http://www.example.com/overervingshacl> a owl:Ontology ;
+    rdfs:label "TODO"@nl ;
+    dcterms:contributor [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://www.telenet.be> ;
+                    foaf:name "Telenet" ] ;
+            foaf:firstName "Koen" ;
+            foaf:lastName "D'Haen" ;
+            foaf:mbox <mailto:koen.dhaen1@staff.telenet.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://www.vmsw.be> ;
+                    foaf:name "VMSW" ] ;
+            foaf:firstName "Wout" ;
+            foaf:lastName "Groniger" ;
+            foaf:mbox <mailto:Wout.groniger@vmsw.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://stad.gent> ;
+                    foaf:name "Stad Gent" ] ;
+            foaf:firstName "Diedrik" ;
+            foaf:lastName "Gaus" ;
+            foaf:mbox <mailto:Diedrik.Gaus@stad.gent> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> ;
+                    foaf:name "Informatie Vlaanderen" ] ;
+            foaf:firstName "Barbara" ;
+            foaf:lastName "Van Broeckhoven" ;
+            foaf:mbox <mailto:barbara.vanbroeckhoven@kb.vlaanderen.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://www.fednot.be> ;
+                    foaf:name "Fednot" ] ;
+            foaf:firstName "Paul" ;
+            foaf:lastName "Verbeeck" ;
+            foaf:mbox <mailto:Paul.Verbeeck@fednot.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <http://idlab.ugent.be> ;
+                    foaf:name "imec - UGent" ] ;
+            foaf:firstName "Erik" ;
+            foaf:lastName "Mannens" ;
+            foaf:mbox <mailto:erik.mannens@ugent.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://www.antwerpen.be> ;
+                    foaf:name "Stad Antwerpen" ] ;
+            foaf:firstName "Christiaan" ;
+            foaf:lastName "Bos" ;
+            foaf:mbox <mailto:christiaan.bos@stad.antwerpen.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> ;
+                    foaf:name "Informatie Vlaanderen" ] ;
+            foaf:firstName "Katrien" ;
+            foaf:lastName "Geerts" ;
+            foaf:mbox <mailto:katrien.geerts@kb.vlaanderen.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <http://idlab.ugent.be> ;
+                    foaf:name "imec - UGent" ] ;
+            foaf:firstName "Dieter" ;
+            foaf:lastName "De Paepe" ;
+            foaf:mbox <mailto:dieter.depaepe@ugent.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <http://tenforce.com> ;
+                    foaf:name "Tenforce" ] ;
+            foaf:firstName "Bert" ;
+            foaf:lastName "Van Nuffelen" ;
+            foaf:mbox <mailto:bert.van.nuffelen@tenforce.com> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://www.vmm.be> ;
+                    foaf:name "VMM" ] ;
+            foaf:firstName "Katleen" ;
+            foaf:lastName "Miserez" ;
+            foaf:mbox <mailto:k.miserez@vmm.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://www.leuven.be> ;
+                    foaf:name "Stad Leuven" ] ;
+            foaf:firstName "Michaël" ;
+            foaf:lastName "Sibiet" ;
+            foaf:mbox <mailto:Michael.Sibiet@leuven.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://www.wonenvlaanderen.be> ;
+                    foaf:name "Wonen-Vlaanderen" ] ;
+            foaf:firstName "Olivier" ;
+            foaf:lastName "Heyvaert" ;
+            foaf:mbox <mailto:olivier.heyvaert@rwo.vlaanderen.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> ;
+                    foaf:name "Informatie Vlaanderen" ] ;
+            foaf:firstName "Raf" ;
+            foaf:lastName "Buyle" ;
+            foaf:mbox <mailto:raf.buyle@kb.vlaanderen.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <http://idlab.ugent.be> ;
+                    foaf:name "imec - UGent" ] ;
+            foaf:firstName "Laurens" ;
+            foaf:lastName "De Vocht" ;
+            foaf:mbox <mailto:laurens.devocht@ugent.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://www.vlaamsbrabant.be> ;
+                    foaf:name "Provincie Vlaams-Brabant" ] ;
+            foaf:firstName "Ireen" ;
+            foaf:lastName "Librecht" ;
+            foaf:mbox <mailto:ireen.librecht@vlaamsbrabant.be> ] ;
+    dcterms:issued "2019-01-01"^^xsd:date ;
+    dcterms:license <file:///C:/git-workingcopies/iv/OSLO-GenerateLocal/1-overervingshacl/voc/temp/TODO>,
+        <https://overheid.vlaanderen.be/sites/default/files/documenten/ict-egov/licenties/hergebruik/modellicentie_gratis_hergebruik_v1_0.html> ;
+    dcterms:mediator [ foaf:homepage <https://data.vlaanderen.be> ;
+            foaf:mbox <mailto:oslo@kb.vlaanderen.be> ;
+            foaf:name "Data Vlaanderen" ] ;
+    dcterms:title "TODO"@nl ;
+    vann:preferredNamespaceUri "http://www.example.com/overervingshacl" ;
+    foaf:maker [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> ;
+                    foaf:name "Informatie Vlaanderen" ] ;
+            foaf:firstName "Geert" ;
+            foaf:lastName "Thijs" ;
+            foaf:mbox <mailto:geert.thijs@kb.vlaanderen.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> ;
+                    foaf:name "Informatie Vlaanderen" ] ;
+            foaf:firstName "Veerle" ;
+            foaf:lastName "Beyaert" ;
+            foaf:mbox <mailto:veerle.beyaert@kb.vlaanderen.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> ;
+                    foaf:name "Informatie Vlaanderen" ] ;
+            foaf:firstName "Ruben" ;
+            foaf:lastName "Capiau" ;
+            foaf:mbox <mailto:ruben.capiau@kb.vlaanderen.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> ;
+                    foaf:name "Informatie Vlaanderen" ] ;
+            foaf:firstName "Jan" ;
+            foaf:lastName "Laporte" ;
+            foaf:mbox <mailto:jan.laporte@kb.vlaanderen.be> ],
+        [ a foaf:person ;
+            schema:affiliation [ foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> ;
+                    foaf:name "Informatie Vlaanderen" ] ;
+            foaf:firstName "Ziggy" ;
+            foaf:lastName "Vanlishout" ;
+            foaf:mbox <mailto:siegfried.vanlishout@kb.vlaanderen.be> ] .
+
