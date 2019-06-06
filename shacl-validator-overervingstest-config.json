@@ -5,6 +5,6 @@
   },
   "TestSolution4": {
     "location": "https://raw.githubusercontent.com/GeertThijs/MyFiles/master/overervingshacl-SHACL-solution4.ttl",
-    "dependencies": ["https://users.ugent.be/~mavbraba/shacl/overervingshacl-SHACL.ttl"]
+    "dependencies": ["https://users.ugent.be/~mavbraba/shacl/overervingshacl-SHACL-solution4.ttl"]
   }
 }
