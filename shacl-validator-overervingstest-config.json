@@ -4,7 +4,7 @@
     "dependencies": ["https://raw.githubusercontent.com/GeertThijs/MyFiles/master/overervingshacl-voc.ttl"]
   },
   "TestSolution4": {
-    "location": "https://raw.githubusercontent.com/GeertThijs/MyFiles/master/overervingshacl-SHACL-solution4.ttl",
+    "location": "https://users.ugent.be/~mavbraba/shacl/overervingshacl-SHACL-solution4.ttl",
     "dependencies": ["https://raw.githubusercontent.com/GeertThijs/MyFiles/master/overervingshacl-voc.ttl"]
   }
 }
