@@ -1,0 +1,104 @@
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix qb:      <http://purl.org/linked-data/cube#> .
+<https://data.vlaanderen.be/shacl/overervingshacl#A1Shape>
+	a sh:NodeShape ;
+	sh:targetClass <http://www.example.com/overervingshacl#A1> ;
+	sh:property [
+		sh:name "heeftB1" ;
+		sh:description "Definitie etc." ;
+		sh:path <http://www.example.com/overervingshacl#heeftB1> ;
+		sh:class <http://www.example.com/overervingshacl#B1> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property [
+		sh:name "a1" ;
+		sh:description "Definitie etc." ;
+		sh:path <http://www.example.com/overervingshacl#a1> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/overervingshacl#A2Shape>
+	a sh:NodeShape ;
+	sh:targetClass <http://www.example.com/overervingshacl#A2> ;
+	sh:property [
+		sh:name "heeftB2" ;
+		sh:description "Definitie etc." ;
+		sh:path <http://www.example.com/overervingshacl#heeftB2> ;
+		sh:class <http://www.example.com/overervingshacl#B2> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property [
+		sh:name "a2" ;
+		sh:description "Definitie etc." ;
+		sh:path <http://www.example.com/overervingshacl#a2> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/overervingshacl#A3Shape>
+	a sh:NodeShape ;
+	sh:targetClass <http://www.example.com/overervingshacl#A3> ;
+	sh:property [
+		sh:name "heeftB3" ;
+		sh:description "Definitie etc." ;
+		sh:path <http://www.example.com/overervingshacl#heeftB3> ;
+		sh:class <http://www.example.com/overervingshacl#B3> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property [
+		sh:name "a3" ;
+		sh:description "Definitie etc." ;
+		sh:path <http://www.example.com/overervingshacl#a3> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/overervingshacl#B1Shape>
+	a sh:NodeShape ;
+	sh:targetClass <http://www.example.com/overervingshacl#B1> ;
+	sh:property [
+		sh:name "b1" ;
+		sh:description "Definitie etc." ;
+		sh:path <http://www.example.com/overervingshacl#b1> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/overervingshacl#B2Shape>
+	a sh:NodeShape ;
+	sh:targetClass <http://www.example.com/overervingshacl#B2> ;
+	sh:property [
+		sh:name "b2" ;
+		sh:description "Definitie etc." ;
+		sh:path <http://www.example.com/overervingshacl#b2> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/overervingshacl#B3Shape>
+	a sh:NodeShape ;
+	sh:targetClass <http://www.example.com/overervingshacl#B3> ;
+	sh:property [
+		sh:name "b3" ;
+		sh:description "Definitie etc." ;
+		sh:path <http://www.example.com/overervingshacl#b3> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
