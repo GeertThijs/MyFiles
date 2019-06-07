@@ -1,0 +1,10 @@
+{
+  "Test": {
+    "location": "https://raw.githack.com/GeertThijs/MyFiles/master/overervingshacl-SHACL.ttl",
+    "dependencies": ["https://raw.githack.com/GeertThijs/MyFiles/master/overervingshacl-voc.ttl"]
+  },
+  "TestSolution4": {
+    "location": "https://raw.githack.com/GeertThijs/MyFiles/master/overervingshacl-SHACL-solution4.ttl",
+    "dependencies": ["https://raw.githack.com/GeertThijs/MyFiles/master/overervingshacl-voc.ttl"]
+  }
+}
