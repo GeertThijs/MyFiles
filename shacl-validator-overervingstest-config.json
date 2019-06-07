@@ -1,10 +1,10 @@
 {
   "Test": {
-    "location": "https://raw.githubusercontent.com/GeertThijs/MyFiles/master/overervingshacl-SHACL.ttl",
+    "location": "http://localhost:81/test/overervingshacl-SHACL.ttl",
     "dependencies": ["http://localhost:81/test/overervingshacl-voc.ttl"]
   },
   "TestSolution4": {
-    "location": "https://raw.githubusercontent.com/GeertThijs/MyFiles/master/overervingshacl-SHACL-solution4.ttl",
+    "location": "http://localhost:81/test/overervingshacl-SHACL-solution4.ttl",
     "dependencies": ["http://localhost:81/test/overervingshacl-voc.ttl"]
   }
 }
