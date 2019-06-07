@@ -1,0 +1,10 @@
+{
+  "Test": {
+    "location": "http://localhost:81/test/overervingshacl-SHACL.ttl",
+    "dependencies": ["http://localhost:81/test/overervingshacl-voc.ttl"]
+  },
+  "TestSolution4": {
+    "location": "http://localhost:81/test/overervingshacl-SHACL-solution4.ttl",
+    "dependencies": ["http://localhost:81/test/overervingshacl-voc.ttl"]
+  }
+}
