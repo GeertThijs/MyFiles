@@ -1,6 +1,6 @@
 {
   "MijnDomeinAP": {
-    "location": "https://raw.githubusercontent.com/GeertThijs/MyFiles/master/mijndomeinAP-SHACL.ttl",
-    "dependencies": ["https://raw.githubusercontent.com/GeertThijs/MyFiles/master/mijndomein.ttl"]
+    "location": "https://raw.githack.com/GeertThijs/MyFiles/master/mijndomeinAP-SHACL.ttl",
+    "dependencies": ["https://raw.githack.com/GeertThijs/MyFiles/master/mijndomein.ttl"]
   }
 }
