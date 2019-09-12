@@ -1,5 +1,21 @@
 {
-  "Museum-basis": {
-    "location": "https://raw.githubusercontent.com/Informatievlaanderen/OSLO-Generated/test-feature-checkout/doc/applicatieprofiel/museum-basis/zonderstatus/20190917/shacl/museum-basis-SHACL.ttl"
-  }
+  "@context": "https://otl-test.data.vlaanderen.be/doc/applicatieprofiel/museum-basis/zonderstatus/20190917/context/museum-basis.jsonld",
+  "@graph": [
+    {
+      "@id": "https://icomvl.be/id/museum/123",
+      "@type": "Museum",
+      "voorkeursnaam": {
+        "@language": "nl",
+        "@value": "FOMU"
+      }
+    },
+    {
+      "@id": "https://icomvl.be/id/museum/456",
+      "@type": "Museum",
+      "voorkeursnaam": {
+        "@language": "nl",
+        "@value": "MIMA"
+      }
+    }
+  ]
 }
