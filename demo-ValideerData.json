@@ -1,20 +1,13 @@
 {
-  "@context": "https://otl-test.data.vlaanderen.be/doc/applicatieprofiel/museum-basis/zonderstatus/20190917/context/museum-basis.jsonld",
+  "@context": {"MijnKlasse":"http://www.example.com/mijndomein#MijnKlasse"},
   "@graph": [
     {
       "@id": "https://icomvl.be/id/museum/123",
-      "@type": "Museum",
-      "voorkeursnaam": {
-        "@language": "nl",
-        "@value": "FOMU"
-      }
+      "@type": "MijnKlasse"
     },
     {
       "@id": "https://icomvl.be/id/museum/456",
-      "@type": "Museum",
-      "voorkeursnaam": {
-        "@language": "nl",
-        "@value": "MIMA"
+      "@type": "MuseumMijnKlasse"
       }
     }
   ]
