@@ -1,0 +1,6 @@
+{
+		  "Museum-basis": {
+		    "location": "https://raw.githubusercontent.com/Informatievlaanderen/OSLO-Generated/test-feature-checkout/doc/applicatieprofiel/museum-basis/zonderstatus/20190917/shacl/museum-basis-SHACL.ttl",
+		    "dependencies": [ "https://raw.githubusercontent.com/Informatievlaanderen/OSLO-Generated/test-feature-checkout/doc/vocabularium/museum/zonderstatus/20190917/voc/museum.ttl" ]
+		  }
+}
