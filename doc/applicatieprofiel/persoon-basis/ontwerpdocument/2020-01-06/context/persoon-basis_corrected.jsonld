@@ -18,7 +18,7 @@
     "Huwelijk": "https://data.vlaanderen.be/ns/persoon#Huwelijk",
     "Inwoner": "https://data.vlaanderen.be/ns/persoon#Inwoner",
     "Inwonerschap": "https://data.vlaanderen.be/ns/persoon#Inwonerschap",
-    "Inwonerschap.inwonerschap": {
+    "Inwonerschap.binnenJurisdictie": {
       "@id": "https://data.vlaanderen.be/ns/persoon#Inwonerschap.binnenJurisdictie",
       "@type": "http://purl.org/dc/terms/Jurisdiction"
     },
