@@ -38,11 +38,16 @@
       "@id": "https://data.vlaanderen.be/ns/persoon#heeftPersoonsrelatie",
       "@type": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie"
     },
-    "Persoon.inwonerschap": {
+    "Persoon.inwonerschap-direct": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/person#residency",
       "@type": "http://purl.org/dc/terms/Jurisdiction"
     },
+    "Persoon.inwonerschap-indirect": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftInwonerschap",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Inwonerschap"
+    },    
     "Persoon.staatsburgerschap": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/persoon#heeftStaatsburgerschap",
