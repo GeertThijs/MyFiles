@@ -59,7 +59,7 @@
       "@type": "http://purl.org/dc/terms/Location"
     },
     "Persoonsrelatie": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie",
-    "Persoonsrelatie.heeftRelatieMet": {
+    "Persoonsrelatie.isRelatieMet": {
       "@id": "https://data.vlaanderen.be/ns/persoon#isRelatieMet",
       "@type": "http://www.w3.org/ns/person#Person"
     },
