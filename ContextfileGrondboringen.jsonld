@@ -21,7 +21,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#double"
     },
     "Bekistinginterval.geometrie": {
-      "@id": "https://data.vlaanderen.be/ns/grondboringen#^geometrie",
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#geometrie",
       "@type": "@id"
     },
     "Bekistinginterval.materiaal": {
@@ -344,23 +344,23 @@
       "@type": "@id"
     },
     "Grondmonster": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
-    "Grondmonster.^bemonsteringsplaats": {
-      "@id": "https://data.vlaanderen.be/ns/grondboringen#^bemonsteringsplaats",
+    "Grondmonster.bemonsteringsplaats": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#bemonsteringsplaats",
       "@type": "@id"
     },
-    "Grondmonster.^bemonsteringstijdstip": {
-      "@id": "https://data.vlaanderen.be/ns/grondboringen#^bemonsteringstijdstip",
+    "Grondmonster.bemonsteringstijdstip": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#bemonsteringstijdstip",
       "@type": "@id"
     },
-    "Grondmonster.^grootte": {
-      "@id": "https://data.vlaanderen.be/ns/grondboringen#^grootte",
+    "Grondmonster.grootte": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#grootte",
       "@type": "@id"
     },
-    "Grondmonster.^huidigeLocatie": {
-      "@id": "https://data.vlaanderen.be/ns/grondboringen#^huidigeLocatie",
+    "Grondmonster.huidigeLocatie": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#huidigeLocatie",
       "@type": "@id"
     },
-    "Grondmonster.^materiaalklasse": {
+    "Grondmonster.materiaalklasse": {
       "@id": "https://data.vlaanderen.be/ns/grondboringen#materiaalklasse",
       "@type": "@id"
     },
