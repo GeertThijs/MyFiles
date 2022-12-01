@@ -312,12 +312,10 @@
     },
     "GeographicalName": "http://vocab.belgif.be/ns/building#GeographicalName",
     "GeographicalName.language": {
-      "@id": "http://vocab.belgif.be/ns/building#language",
-      "@type": ""
+      "@id": "http://vocab.belgif.be/ns/building#language"
     },
     "GeographicalName.spelling": {
-      "@id": "http://vocab.belgif.be/ns/building#spelling",
-      "@type": ""
+      "@id": "http://vocab.belgif.be/ns/building#spelling"
     },
     "Geometry": "http://www.w3.org/ns/locn#Geometry",
     "Geometry.gml": {
@@ -365,8 +363,7 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Identifier.structuredIdentifier": {
-      "@id": "http://vocab.belgif.be/ns/building#structuredIdentificator",
-      "@type": ""
+      "@id": "http://vocab.belgif.be/ns/building#structuredIdentificator"
     },
     "Langstring": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
     "Length": "https://data.vlaanderen.be/ns/weg#Lengte",
