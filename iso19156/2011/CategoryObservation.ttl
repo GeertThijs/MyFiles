@@ -1,0 +1,37 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns0: <http://def.isotc211.org/iso19150/-2/2012/base#> .
+
+<http://def.isotc211.org/iso19156/2011/CategoryObservation>
+  a owl:Ontology ;
+  rdfs:label "ISO 19156:2011 categoryObservation" ;
+  dc:source "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  owl:versionInfo "2011-12-15" ;
+  owl:imports <http://def.isotc211.org/iso19156/2011/Observation>, <http://def.isotc211.org/iso19150/-2/2012/base> .
+
+<http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation>
+  a owl:Class ;
+  rdfs:label "OM_CategoryObservation" ;
+  skos:definition "Example: A category observation of the .gu.taxon.gu. (property-type) of .gu.specimen 123.gu. (feature-of-interest) by .gu.Amy Bachrach.gu. (procedure) had the result .gu.Eucalyptus caesia.gu. (from the Flora of Australia)" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>, [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19103/2005/Names#ScopedName>
+  ] .
+
+<http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result>
+  a owl:ObjectProperty ;
+  rdfs:label "result" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  ns0:aggregationType "partOfCompositeAggregation" ;
+  ns0:associationName "Range" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation> ;
+  rdfs:range <http://def.isotc211.org/iso19103/2005/Names#ScopedName> .
