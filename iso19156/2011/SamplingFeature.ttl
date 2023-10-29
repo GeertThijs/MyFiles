@@ -1,0 +1,158 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns0: <http://def.isotc211.org/iso19150/-2/2012/base#> .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature>
+  a owl:Ontology ;
+  rdfs:label "ISO 19156:2011 samplingFeature" ;
+  dc:source "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  owl:versionInfo "2011-12-15" ;
+  owl:imports <http://def.isotc211.org/iso19156/2011/Observation>, <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance>, <http://def.isotc211.org/iso19150/-2/2012/base> .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex>
+  a owl:Class ;
+  rdfs:label "SamplingFeatureComplex" ;
+  skos:definition """Sampling features are frequently related to each other, as parts of complexes, through sub-sampling, and in other ways. If present, the association class class .lt.i.gt.SamplingFeatureComplex.lt..sl.i.gt. (Figure 9) shall link a SF_SamplingFeature to another SF_SamplingFeature. It shall support one attribute.EXAMPLES	sampling points are often located along a sampling curve; specimens are usually obtained from a sampling point; pixels are part of a scene; stations are often part of an array. This association complements the Intention association which describes relationships between a sampling feature and domain features.   """ ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19103/2005/Names#GenericName>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>
+  ] .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>
+  a owl:Class ;
+  rdfs:label "SF_SamplingFeature" ;
+  skos:definition """.lt.ul.gt.	.lt.li.gt..lt.b.gt.Role of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.Sampling features are artefacts of an observational strategy, and have no significant function outside of their role in the observation process. The physical characteristics of the features themselves are of little interest, except perhaps to the manager of a sampling campaign.EXAMPLE	A .ldq.station.rdq. is essentially an identifiable locality where a sensor system or procedure may be deployed and an observation made. In the context of the observation model, it connotes the .ldq.world in the vicinity of the station.rdq., so the observed properties relate to the physical medium at the station, and not to any physical artefact such as a mooring, buoy, benchmark, monument, well, etc. NOTE	A transient sampling feature, such as a ships-track or flight-line, may be identified and described, but is unlikely to be revisited exactly. A sampling feature is intended to sample some feature of interest in an application domain. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features. .lt.ul.gt.	.lt.li.gt..lt.b.gt.Classification of sampling features.lt..sl.b.gt..lt..sl.li.gt..lt..sl.ul.gt.A small number of sampling patterns are common across disciplines in observational science. These provide a basis for processing and portrayal tools which are similar across domains, and depend primarily on the geometry of the sample design. Common names for sampling features include specimen, station, profile, transect, path, swath, and scene. These are classified primarily by their topological dimension. Point-located samples are defined in this Clause, extensive samples of various dimensions in Clause 9 and specimens in Clause 10. """ ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  ns0:isAbstract true ;
+  ns0:constraint "sampledFeature-.gt.forAll(not (oclIsKindOf(SF_SamplingFeature) or oclIsKindOf(OM_Observation)))" ;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>, [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.relatedObservation> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.theSamplingFeatureComplex> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex>
+  ] .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection>
+  a owl:Class ;
+  rdfs:label "SF_SamplingFeatureCollection" ;
+  skos:definition """The class .lt.i.gt.SF_SamplingFeatureCollection.lt..sl.i.gt. (Figure 8) is an instance of the .og.metaclass.cg. GF_FeatureType (ISO 19109), which therefore represents a feature type. SF_SamplingFeatureCollection shall support one association.  The association .lt.i.gt.Intention .lt..sl.i.gt.is inheritted from the parent class. Where a collection is composed of sampling features whose intention is to sample a common domain feature, then the target of the Intention association should be the common domain feature. Where a collection is composed of sampling features whose intention is to sample features that form a complex feature, then the target of the Intention association should be the complex. However, where a collection is formed of arbitrary sampling features whose intentions are not consistent or related, then the target of the association of the collection should indicate this. EXAMPLE	In a GML-conformat implementation, the XML element corresponding to this association shall be named  with the target roleName .gu.sampledFeature.gu.. In an instance of a heterogeneous sampling feature collection, it may carry an xlink:href attribute with a value such as .gu.urn:cgi:feature:CSIRO:multiple.gu. which indicates that the intention of the collection is to sample an unrelated collection of domain features. """ ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>
+  ] .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role>
+  a owl:ObjectProperty ;
+  rdfs:label "role" ;
+  skos:definition "The attribute .lt.i.gt.role:GenericName .lt..sl.i.gt.shall describe the relationship of the target SF_SamplingFeature to the source SF_SamplingFeature. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex> ;
+  rdfs:range <http://def.isotc211.org/iso19103/2005/Names#GenericName> .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>
+  a owl:ObjectProperty ;
+  rdfs:label "parameter" ;
+  skos:definition "If present, the attributes .lt.i.gt.parameter:NamedValue.lt..sl.i.gt. shall describe an arbitrary parameter associated with the SF_SamplingFeature. This might be a parameter that qualifies the interaction with the sampled feature, or an environmental parameter associated with the sampling process. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage>
+  a owl:ObjectProperty ;
+  rdfs:label "lineage" ;
+  skos:definition "If present, the attribute lineage:LI_Lineage shall describe the history and provenance of the SF_SamplingFeature. This might include information relating to the handling of the specimen, or details of the survey procedure of a spatial sampling feature.  " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+  rdfs:range <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature>
+  a owl:ObjectProperty ;
+  rdfs:label "sampledFeature" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  ns0:associationName "Intention" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature>, <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.relatedObservation>
+  a owl:ObjectProperty ;
+  rdfs:label "relatedObservation" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  ns0:associationName "Design" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member>
+  a owl:ObjectProperty ;
+  rdfs:label "member" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  ns0:associationName "Collection" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection> ;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.theSamplingFeatureComplex>
+  a owl:ObjectProperty ;
+  rdfs:label "theSamplingFeatureComplex" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> ;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex> .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature>
+  a owl:ObjectProperty ;
+  rdfs:label "relatedSamplingFeature" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex> ;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
