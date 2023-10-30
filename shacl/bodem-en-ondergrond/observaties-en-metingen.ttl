@@ -12,6 +12,7 @@
 <> owl:imports <https://raw.githubusercontent.com/GeertThijs/MyFiles/master/iso19156/2011/SamplingFeature.ttl> .
 <> owl:imports <https://raw.githubusercontent.com/GeertThijs/MyFiles/master/iso19156/2011/Measurement.ttl> .
 <> owl:imports <https://raw.githubusercontent.com/GeertThijs/MyFiles/master/iso19156/2011/CategoryObservation.ttl> .
+<> owl:imports <https://raw.githubusercontent.com/GeertThijs/MyFiles/master/iso19156/2011/Specimen.ttl> .
 <> owl:imports <https://data.vlaanderen.be/ns/grondboringen.ttl> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28> <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#GeneriekeNaamShape>,
