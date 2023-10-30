@@ -1,0 +1,254 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns0: <http://def.isotc211.org/iso19150/-2/2012/base#> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen>
+  a owl:Ontology ;
+  rdfs:label "ISO 19156:2011 specimen" ;
+  dc:source "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  owl:versionInfo "2011-12-15" ;
+  owl:imports <http://def.isotc211.org/iso19156/2011/SamplingFeature>, <http://def.isotc211.org/iso19150/-2/2012/base> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#uGeometryLocation>
+  a owl:Class ;
+  rdfs:label "GeometryLocation" ;
+  skos:definition "The attribute .lt.i.gt.geometryLocation:GM_Object .lt..sl.i.gt.shall select a geometric representation of the location. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#uGeometryLocation.geometryLocation> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#uGeometryLocation.geometryLocation> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19107/2003/GeometryRoot#GM_Object>
+  ] .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#uNameLocation>
+  a owl:Class ;
+  rdfs:label "NameLocation" ;
+  skos:definition "The attribute .lt.i.gt.nameLocation:EX_GeographicDescription .lt..sl.i.gt.shall select a description of the location using text or an identifier. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#uNameLocation.nameLocation> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#uNameLocation.nameLocation> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19115/2006/ExtentInformation#EX_GeographicDescription>
+  ] .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep>
+  a owl:Class ;
+  rdfs:label "PreparationStep" ;
+  skos:definition "In many applications specimen preparation procedures are applied to the material prior to its use in an observation. The class .lt.i.gt.PreparationStep.lt..sl.i.gt. (Figure 13) shall link a SF_Specimen to a OM_Process that describes a phase of the specimen preparation.  It shall support one attribute. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep>
+  ] .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Process>
+  a owl:Class ;
+  rdfs:label "SF_Process" ;
+  skos:definition "The class SF_Process (Figure 13) is an instance of the .og.metaclass.cg. GF_FeatureType (ISO 19109:2005), which therefore represents a feature type. SF_Process is abstract, and has no attributes, operations or associations. It serves as the base class for processes associated with the design and preparation of sampling features. The purpose of a sampling process is to generate or transform a sampling feature.  " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  ns0:isAbstract true .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen>
+  a owl:Class ;
+  rdfs:label "SF_Specimen" ;
+  skos:definition "A Specimen is a physical sample, obtained for observation(s) carried out .lt.i.gt.ex situ, .lt..sl.i.gt.sometimes in a laboratory. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>, [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19103/2005/Names#GenericName>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime> ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19107/2003/GeometryRoot#GM_Object>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/Specimen#Location>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19103/2005/Names#GenericName>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size> ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.thePreparationStep> ;
+    owl:allValuesFrom <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep>
+  ] .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#uGeometryLocation.geometryLocation>
+  a owl:ObjectProperty ;
+  skos:prefLabel "geometryLocation" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#uGeometryLocation> ;
+  rdfs:range <http://def.isotc211.org/iso19107/2003/GeometryRoot#GM_Object> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#uNameLocation.nameLocation>
+  a owl:ObjectProperty ;
+  skos:prefLabel "nameLocation" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#uNameLocation> ;
+  rdfs:range <http://def.isotc211.org/iso19115/2006/ExtentInformation#EX_GeographicDescription> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time>
+  a owl:ObjectProperty ;
+  rdfs:label "time" ;
+  skos:definition "The attribute .lt.i.gt.time:TM_Object .lt..sl.i.gt.shall describe the time that the OM_Process was applied to the SP_Specimen. It supports ordering of preparation steps." ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep> ;
+  rdfs:range <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator>
+  a owl:ObjectProperty ;
+  rdfs:label "processOperator" ;
+  skos:definition "If present, the attribute .lt.i.gt.processOperator:CI_ResponsibleParty .lt..sl.i.gt.shall describe the operator of the process involved in the preparation step. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep> ;
+  rdfs:range <http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass>
+  a owl:ObjectProperty ;
+  rdfs:label "materialClass" ;
+  skos:definition """The attribute .lt.i.gt.materialClass:GenericName .lt..sl.i.gt.shall provide a basic classification of the material type of the specimen. EXAMPLE	soil, water, rock, aqueous, liquid, tissue, vegetation, food. """ ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> ;
+  rdfs:range <http://def.isotc211.org/iso19103/2005/Names#GenericName> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime>
+  a owl:ObjectProperty ;
+  rdfs:label "samplingTime" ;
+  skos:definition "The attribute .lt.i.gt.samplingTime:TM_Object .lt..sl.i.gt.shall record when the specimen was retrieved from the sampled feature." ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> ;
+  rdfs:range <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation>
+  a owl:ObjectProperty ;
+  rdfs:label "samplingLocation" ;
+  skos:definition """If present, the attribute .lt.i.gt.samplingLocation:GM_Object .lt..sl.i.gt.shall describe the location from where the specimen was obtained. NOTE	Where a specimen has a relatedSamplingFeature whose location provides an unambiguous location then this attribute is not required. However, if the specific sampling location within the sampledFeature is important, then this attribute supports its description. """ ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> ;
+  rdfs:range <http://def.isotc211.org/iso19107/2003/GeometryRoot#GM_Object> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod>
+  a owl:ObjectProperty ;
+  rdfs:label "samplingMethod" ;
+  skos:definition "If present, the attribute .lt.i.gt.samplingMethod:SF_Process .lt..sl.i.gt.shall describe the method used to obtain the specimen from its sampledFeature. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> ;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation>
+  a owl:ObjectProperty ;
+  rdfs:label "currentLocation" ;
+  skos:definition """If present, the attribute .lt.i.gt.currentLocation:Location .lt..sl.i.gt.shall describe the location of a physical specimen. This may be a storage location, such as a shelf in a warehouse or a drawer in a museum. NOTE	If a specimen no longer exists, for example it was destroyed in connection with an observation act, then the currentLocation should be omitted or carry a suitable null indicator. """ ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> ;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/Specimen#Location> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType>
+  a owl:ObjectProperty ;
+  rdfs:label "specimenType" ;
+  skos:definition """If present, the attribute .lt.i.gt.specimenType:GenericName .lt..sl.i.gt.shall describe the basic form of the specimen. EXAMPLE	polished section; core; pulp; solution. """ ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> ;
+  rdfs:range <http://def.isotc211.org/iso19103/2005/Names#GenericName> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size>
+  a owl:ObjectProperty ;
+  rdfs:label "size" ;
+  skos:definition "If present, the attribute .lt.i.gt.size:Measure .lt..sl.i.gt.shall describe a physical extent of the specimen. This may be length, mass, volume, etc as appropriate for the specimen instance and its material class. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> ;
+  rdfs:range <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails>
+  a owl:ObjectProperty ;
+  rdfs:label "thePreparationStep" ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep> ;
+  rdfs:range <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process> .
+
+<http://def.isotc211.org/iso19156/2011/Specimen#Location>
+  a owl:Class ;
+  rdfs:label "Location" ;
+  skos:definition "Location (Figure 13) is a union class (choice) that shall support two attributes. " ;
+  rdfs:isDefinedBy "http://standards.iso.org/iso/19156/ed-1/en/" ;
+  owl:equivalentClass [
+    a owl:Class ;
+    owl:unionOf (
+     <http://def.isotc211.org/iso19156/2011/Specimen#uGeometryLocation>
+     <http://def.isotc211.org/iso19156/2011/Specimen#uNameLocation>
+   )
+  ] .
