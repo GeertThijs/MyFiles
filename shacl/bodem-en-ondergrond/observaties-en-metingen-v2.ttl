@@ -415,7 +415,7 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#MetingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:class <https://schema.org/QuantitativeValue>;
     shacl:description "Resultaat van de Meting."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
