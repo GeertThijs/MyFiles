@@ -10,6 +10,7 @@
 @prefix ns0: <http://def.isotc211.org/iso19150/-2/2012/base#> .
 
 <> owl:imports <https://www.w3.org/2006/time.ttl> .
+<> owl:imports <https://raw.githubusercontent.com/GeertThijs/MyFiles/master/iso19156/2011/Measurement.ttl> .
 <> owl:imports <https://raw.githubusercontent.com/GeertThijs/MyFiles/master/iso19156/2011/CategoryObservation.ttl> .
 <> owl:imports <https://raw.githubusercontent.com/GeertThijs/MyFiles/master/iso19156/2011/SamplingFeature.ttl> .
 <> owl:imports <https://raw.githubusercontent.com/GeertThijs/MyFiles/master/iso19156/2011/Specimen.ttl> .
