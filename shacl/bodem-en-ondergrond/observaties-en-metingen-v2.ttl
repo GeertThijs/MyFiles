@@ -531,7 +531,7 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/kandidaatstandaard/2022-04-28#ObservatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
     shacl:description "Het moment waarop het resultaat van de Observatie van toepassing was."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
