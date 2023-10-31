@@ -544,7 +544,7 @@
     shacl:name "geassocieerdeObservatie"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation>
   ], [
-    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period>;
+    shacl:class <http://www.w3.org/2006/time#ProperInterval>;
     shacl:description "Periode waarvoor het resultaat van de Observatie geldt."@nl;
     shacl:maxCount 1;
     shacl:name "geldigeTijd"@nl;
@@ -604,7 +604,7 @@
     shacl:name "resultaatkwaliteit"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>
   ], [
-    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
     shacl:description "Tijdstip waarop het resultaat van de Observatie werd bekomen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
