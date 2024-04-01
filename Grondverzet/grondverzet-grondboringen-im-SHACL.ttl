@@ -85,6 +85,11 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#SysteemShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#BemonsteringsobjectComplexShape> .
 
+	<http://www.w3.org/2001/XMLSchema#string>
+	    a
+	        owl:Class ;
+    rdfs:subClassOf <http://def.isotc211.org/iso19103/2005/Names#GenericName> ;
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#AgentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass dc:Agent .
