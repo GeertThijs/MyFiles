@@ -565,7 +565,7 @@
   shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#BenoemdeWaardeShape/1399bd400d4637b15d5fe38202d6572f82150aac> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#BenoemdeWaarde.naam";
-  shacl:class <http://def.isotc211.org/iso19103/2005/Names#GenericName>;
+  shacl:or ([shacl:datatype xsd:string][shacl:datatype xsd:anyURI]);
   shacl:description "Naam vh type van de waarde."@nl;
   shacl:name "naam"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name> .
