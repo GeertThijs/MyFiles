@@ -9,6 +9,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 
+xsd:string a owl:Class ;
+rdfs:subClassOf <http://def.isotc211.org/iso19103/2005/Names#GenericName> .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01> rdfs:member <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#GeneriekeNaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#PositioneleNauwkeurigheidShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#HerkomstShape>,
@@ -85,9 +88,6 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#SysteemShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#BemonsteringsobjectComplexShape> .
-
-xsd:string a owl:Class ;
-rdfs:subClassOf <http://def.isotc211.org/iso19103/2005/Names#GenericName> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#AgentShape> a shacl:NodeShape;
   shacl:closed false;
