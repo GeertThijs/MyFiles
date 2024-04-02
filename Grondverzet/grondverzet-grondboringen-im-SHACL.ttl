@@ -14,11 +14,11 @@ qudt:Unit a
 	     owl:Class ;
 rdfs:subClassOf skos:Concept .
 
-<https://data.vlaanderen.be/ns/adres#Adres> a owl:Class ; rdfs:subclassOf prov:Location.
-<http://www.w3.org/ns/locn#Address> a owl:Class ; rdfs:subclassOf prov:Location.
-rdf:langString a owl:Class ; rdfs:subclassOf prov:Location.
-dc:Location  a owl:Class ; rdfs:subclassOf prov:Location. 
-<http://fixme.com#RuimtelijkObject> a owl:Class ; rdfs:subclassOf prov:Location.
+<https://data.vlaanderen.be/ns/adres#Adres> a owl:Class ; rdfs:subClassOf prov:Location.
+<http://www.w3.org/ns/locn#Address> a owl:Class ; rdfs:subClassOf prov:Location.
+rdf:langString a owl:Class ; rdfs:subClassOf prov:Location.
+dc:Location  a owl:Class ; rdfs:subClassOf prov:Location. 
+<http://fixme.com#RuimtelijkObject> a owl:Class ; rdfs:subClassOf prov:Location.
 
 <https://data.vlaanderen.be/ns/grondboringen#Boormethode> a owl:Class ; rdfs:subClassOf <http://www.w3.org/ns/sosa/om#SamplingProcedure>.
 <https://data.vlaanderen.be/ns/grondboringen#Boor> a owl:Class ; rdfs:subClassOf <http://www.w3.org/ns/sosa/Sampler>.
