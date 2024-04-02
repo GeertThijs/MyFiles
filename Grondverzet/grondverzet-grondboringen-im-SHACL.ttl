@@ -26,6 +26,9 @@ dc:Location  a owl:Class ; rdfs:subclassOf prov:Location.
 <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole>  a owl:Class ; rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>.
 <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> a owl:Class ; rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>.
 
+<http://www.w3.org/2006/time#Instant> a owl:Class ; rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity>.
+<http://www.w3.org/2006/time#ProperInterval> a owl:Class ; rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity>.
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01> rdfs:member <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#GeneriekeNaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#PositioneleNauwkeurigheidShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#HerkomstShape>,
