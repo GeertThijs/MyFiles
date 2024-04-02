@@ -1419,7 +1419,7 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/ca4892872b345b4fe994128b7c31877979275399>;
 [
 shacl:nodekind shacl:literal;
-shacl:path <https://qudt.org/schema/qudt//value>               
+shacl:path <https://qudt.org/schema/qudt/value>               
 ];
   shacl:targetClass <https://qudt.org/schema/qudt/QuantityValue> .
 
@@ -1427,13 +1427,13 @@ shacl:path <https://qudt.org/schema/qudt//value>
   shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
   shacl:maxCount 1;
   shacl:name "waarde"@nl;
-  shacl:path <https://qudt.org/schema/qudt//value> .
+  shacl:path <https://qudt.org/schema/qudt/value> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/ca4892872b345b4fe994128b7c31877979275399> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaarde.waarde";
   shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
   shacl:minCount 1;
   shacl:name "waarde"@nl;
-  shacl:path <https://qudt.org/schema/qudt//value> .
+  shacl:path <https://qudt.org/schema/qudt/value> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/db2555457b897a2e792d884a673aab52e0a72c28> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaarde.standaardeenheid";
   shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
