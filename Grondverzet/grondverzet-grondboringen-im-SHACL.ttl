@@ -89,7 +89,12 @@ rdfs:subClassOf skos:Concept .
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#WettelijkKaderBoringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#SysteemShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#BemonsteringsobjectComplexShape> .
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#BemonsteringsobjectComplexShape>,
+    <https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#RuimtelijkObjectShape>,
+    <https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#PlaatsShape>,
+    <https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#GeografischeNaamShape>,
+    <https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#AdresvoorstellingShape>,
+    <https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#AdresShape>.
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#AgentShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1808,3 +1813,125 @@ shacl:path <https://qudt.org/schema/qudt/value>
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#WettelijkKaderShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/generiek#WettelijkKader> .
+
+<https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#AdresShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#Adres> .
+
+<https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#AdresvoorstellingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "Hoogste Administratieve eenheid vh adres, doorgaans een land."@nl;
+    shacl:maxCount 1;
+    shacl:name "administratieve eenheid niveau 1"@nl;
+    shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
+    shacl:maxCount 1;
+    shacl:name "administratieve eenheid niveau 2"@nl;
+    shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"@nl;
+    shacl:maxCount 1;
+    shacl:name "adresgebied"@nl;
+    shacl:path <http://www.w3.org/ns/locn#addressArea>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
+    shacl:maxCount 1;
+    shacl:name "busnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Gemeentenaam vh adres."@nl;
+    shacl:maxCount 1;
+    shacl:name "gemeentenaam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#gemeentenaam>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    shacl:maxCount 1;
+    shacl:name "huisnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Land waarin het adres gelegen is."@nl;
+    shacl:maxCount 1;
+    shacl:name "land"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#land>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
+    shacl:name "locatieaanduiding"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt."@nl;
+    shacl:name "locatienaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorName>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Postbusnummer in een postkantoor."@nl;
+    shacl:maxCount 1;
+    shacl:name "postbus"@nl;
+    shacl:path <http://www.w3.org/ns/locn#poBox>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount 1;
+    shacl:name "postcode"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postCode>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount 1;
+    shacl:name "postnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postName>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Straatnaam vh adres."@nl;
+    shacl:maxCount 1;
+    shacl:name "straatnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#thoroughfare>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/adres#Adres>;
+    shacl:description "Adres waarvan de adresvoorstelling is afgeleid."@nl;
+    shacl:maxCount 1;
+    shacl:name "verwijstNaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#verwijstNaar>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Het complete adres in één string, al dan niet geformatteerd."@nl;
+    shacl:maxCount 1;
+    shacl:name "volledig adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#fullAddress>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Address> .
+
+<https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#GeografischeNaamShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#PlaatsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van de plaats of het gebied."@nl;
+    shacl:maxCount 1;
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de plaats of van het gebied."@nl;
+    shacl:maxCount 1;
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
+  ];
+  shacl:targetClass dc:Location .
+
+<https://implementatie.data.vlaanderen.be//doc/implementatiemodel/grondverzet/locaties/ontwerpstandaard/2023-10-01#RuimtelijkObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://fixme.com#RuimtelijkObject> .
