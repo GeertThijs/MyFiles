@@ -1416,7 +1416,7 @@
   shacl:property <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/db2555457b897a2e792d884a673aab52e0a72c28>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/dcf18241c7695eee6abe5c99b390387f700ef44c>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/762f5094731b213d88d8a29332598749ea0eaa46>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/ca4892872b345b4fe994128b7c31877979275399>;
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/ca4892872b345b4fe994128b7c31877979275399>,
 [
 shacl:nodekind shacl:literal;
 shacl:path <https://qudt.org/schema/qudt/value>               
