@@ -12,7 +12,7 @@
 
 qudt:Unit a
 	     owl:Class ;
-rdfs:subClassOf skos:Concept ;
+rdfs:subClassOf skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01> rdfs:member <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#GeneriekeNaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#PositioneleNauwkeurigheidShape>,
