@@ -20,6 +20,12 @@ rdf:langString a owl:Class ; rdfs:subclassOf prov:Location.
 dc:Location  a owl:Class ; rdfs:subclassOf prov:Location. 
 <http://fixme.com#RuimtelijkObject> a owl:Class ; rdfs:subclassOf prov:Location.
 
+<https://data.vlaanderen.be/ns/grondboringen#Boormethode> a owl:Class ; rdfs:subClassOf <http://www.w3.org/ns/sosa/om#SamplingProcedure>.
+<https://data.vlaanderen.be/ns/grondboringen#Boor> a owl:Class ; rdfs:subClassOf <http://www.w3.org/ns/sosa/Sampler>.
+<https://data.vlaanderen.be/ns/grondboringen#Grondboring> a owl:Class ; rdfs:subClassOf <http://www.w3.org/ns/sosa/Sampling>.
+<http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole>  a owl:Class ; rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>.
+<https://data.vlaanderen.be/ns/grondboringen#Grondmonster> a owl:Class ; rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>.
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01> rdfs:member <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#GeneriekeNaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#PositioneleNauwkeurigheidShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#HerkomstShape>,
