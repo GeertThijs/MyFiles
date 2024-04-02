@@ -1417,6 +1417,10 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/dcf18241c7695eee6abe5c99b390387f700ef44c>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/762f5094731b213d88d8a29332598749ea0eaa46>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/ca4892872b345b4fe994128b7c31877979275399>;
+[
+shacl:nodekind shacl:literal;
+shacl:path <https://qudt.org/schema/qudt//value>               
+];
   shacl:targetClass <https://qudt.org/schema/qudt/QuantityValue> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaardeShape/762f5094731b213d88d8a29332598749ea0eaa46> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#KwantitatieveWaarde.waarde";
