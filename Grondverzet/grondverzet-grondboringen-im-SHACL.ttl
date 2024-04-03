@@ -27,7 +27,7 @@ dc:Location  a owl:Class ; rdfs:subClassOf prov:Location.
 <http://www.w3.org/2006/time#Instant> a owl:Class ; rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity>.
 <http://www.w3.org/2006/time#ProperInterval> a owl:Class ; rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity>.
 
-<http://www.opengis.net/ont/sf#Curve> a owl:Class ; rdfs:subClassO <http://www.w3.org/ns/locn#Geometry>.
+<http://www.opengis.net/ont/sf#Curve> a owl:Class ; rdfs:subClassOf <http://www.w3.org/ns/locn#Geometry>.
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01> rdfs:member <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#GeneriekeNaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#PositioneleNauwkeurigheidShape>,
