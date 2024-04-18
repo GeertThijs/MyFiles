@@ -480,8 +480,8 @@ dc:Location  a owl:Class ; rdfs:subClassOf prov:Location.
   shacl:path <http://www.w3.org/ns/sosa/isResultOf> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#BemonsteringsobjectShape/59b9347ab72afa0c39a2c50ed656780c82fba2dc> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#Bemonsteringsobject.bemonsterdObject";
-  shacl:class <https://data.vlaanderen.be/ns/grondboringen#Grondobject>;
-  shacl:description "Het Grondobject dat wordt bemonsterd."@nl;
+  shacl:class <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>;
+  shacl:description "Verwijzing naar het Object dat men wil bemonsteren."@nl;
   shacl:name "bemonsterdObject"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> .
 
@@ -492,7 +492,7 @@ dc:Location  a owl:Class ; rdfs:subClassOf prov:Location.
   shacl:path <http://www.w3.org/ns/sosa/isResultOf> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#BemonsteringsobjectShape/7dc9be25e8708bd3eb46ed61288f2a193eea5d61> rdfs:seeAlso "https://data.test-vlaanderen.be/doc/implementatiemodel/grondverzet/grondboringen/ontwerpstandaard/2023-10-01#Bemonsteringsobject.bemonsterdObject";
-  shacl:description "Het Grondobject dat wordt bemonsterd."@nl;
+  shacl:description "Verwijzing naar het Object dat men wil bemonsteren."@nl;
   shacl:minCount 1;
   shacl:name "bemonsterdObject"@nl;
   shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> .
