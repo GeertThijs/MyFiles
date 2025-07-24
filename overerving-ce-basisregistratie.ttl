@@ -1,6 +1,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-<http://www.w3.org/ns/person#Person>
+<https://www.w3.org/ns/person#Person>
 	a owl:Class;
-	rdfs:subClassOf <http://purl.org/dc/terms/Agent> .
+	rdfs:subClassOf <https://purl.org/dc/terms/Agent> .
