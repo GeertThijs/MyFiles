@@ -4,5 +4,5 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 :Person
-	a owl:Class;
+	a rdfs:Class;
 	rdfs:subClassOf dc:Agent.
