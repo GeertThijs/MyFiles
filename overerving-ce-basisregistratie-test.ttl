@@ -1,15 +1,15 @@
-@prefix ns0: <http://www.w3.org/ns/shacl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
- <> owl:imports <http://iflastandards.info/ns/fr/frbr/frbroo.ttl> . 
-  
-<http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object_shape>
-  a <http://www.w3.org/ns/shacl#NodeShape> ;
-  ns0:property [
-    ns0:datatype <http://www.w3.org/ns/adms#Identifier> ;
-    ns0:minCount 1 ;
-    ns0:path <http://www.w3.org/ns/adms#identifier> ;
-    ns0:targetClass <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>
-  ] .
+<http://iflastandards.info/ns/fr/frbr/frbroo/F22>
+    a owl:Class ;
+    rdfs:subClassOf <http://iflastandards.info/ns/fr/frbr/frbroo/F2> .
+
+<http://iflastandards.info/ns/fr/frbr/frbroo/F2>
+    a owl:Class ;
+    rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
