@@ -3,6 +3,6 @@
 @prefix dc: <http://purl.org/dc/terms/>
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-:Person
+typo:Person
 	a owl:Class;
 	rdfs:subClassOf dc:Agent.
