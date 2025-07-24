@@ -14,6 +14,6 @@
     a owl:Class ;
     rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
 
-<http://iflastandards.info/ns/lrm/lrmoo/F3>
+<http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation>
     a owl:Class ;
     rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
