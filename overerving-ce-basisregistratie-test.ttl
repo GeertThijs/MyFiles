@@ -15,9 +15,8 @@
     rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
 
 <http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation>
-    a owl:Class ;
-    rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
+  a rdfs:Class ;
+  rdfs:label "Manifestation"@en ;
+  rdfs:comment "This class comprises products rendering one or more Expressions. A Manifestation is defined by both the overall content and the form of its presentation. The substance of F3 Manifestation is not only signs, but also the manner in which they are presented to be consumed by users, including the kind of media adopted. An F3 Manifestation is the outcome of a publication process where one or more F2 Expressions are prepared for public dissemination, but it may also be a unique form created directly on some material carrier without the intent of being formally published. An instance of F3 Manifestation typically incorporates one or more instances of F2 Expression representing a distinct logical content and all additional input by a publisher such as text layout and cover design. Additionally an F3 Manifestation can be identified by the physical features for the medium of distribution, if applicable. For example, publications in the form of hard-cover and paperback editions would be two distinct instances of F3 Manifestation, even though authorial and editorial content are otherwise identical in both publications. In the case of industrial products such as printed books or music CDs, but also digital material, an instance of F3 Manifestation can be regarded as the prototype for all copies of it. In these cases, an instance of F3 Manifestation specifies all of the features or traits that instances of F5 Item display in order to be copies of a particular publication. In the case of industrial products, instances of F3 Manifestation are also instances of E99 Product Type, normally nowadays identified by characteristic identifiers such as ISBN numbers."@en ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
 
-<https://example.com/testobject>
-    a owl:Class ;
-    rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
