@@ -2,7 +2,7 @@
 @prefix ns1: <https://example.com#Doorhaling.> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[]
+<https://example.com/id/geregistreerdOrganisatie/ro01>
   a <https://example.com#GeregistreerdeOrganisatie> ;
   ns0:doorhaling [
     a <https://example.com#Doorhaling> ;
