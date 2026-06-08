@@ -1,10 +1,11 @@
 @prefix ns0: <https://example.com#GeregistreerdeOrganisatie.> .
 @prefix ns1: <https://example.com#Doorhaling.> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 
 <https://example.com/id/geregistreerdOrganisatie/ro01>
   a <https://example.com#GeregistreerdeOrganisatie> ;
-  ns0:doorhaling [
+  prov:wasInfluencedBy [
     a <https://example.com#Doorhaling> ;
     ns1:redenDoorhaling "https://example.com/concept/redenDoorhaling/fouteKBOnummer"^^xsd:string
   ] .
