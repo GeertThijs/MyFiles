@@ -1,0 +1,8 @@
+{
+    "@id": "_:test01",
+    "@type": "GeregistreerdeOrganisatie",
+    "GeregistreerdeOrganisatie.doorhaling": {
+        "@type": "Doorhaling",
+        "Doorhaling.redenDoorhaling": "https://example.com/concept/redenDoorhaling/fouteKBOnummer"
+    }
+}
