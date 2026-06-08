@@ -1,8 +1,4 @@
-{
-    "@id": "_:test01",
-    "@type": "GeregistreerdeOrganisatie",
-    "GeregistreerdeOrganisatie.doorhaling": {
-        "@type": "Doorhaling",
-        "Doorhaling.redenDoorhaling": "https://example.com/concept/redenDoorhaling/fouteKBOnummer"
-    }
-}
+_:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.com#GeregistreerdeOrganisatie> .
+_:b0 <https://example.com#GeregistreerdeOrganisatie.doorhaling> _:b1 .
+_:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.com#Doorhaling> .
+_:b1 <https://example.com#Doorhaling.redenDoorhaling> "https://example.com/concept/redenDoorhaling/fouteKBOnummer" .
