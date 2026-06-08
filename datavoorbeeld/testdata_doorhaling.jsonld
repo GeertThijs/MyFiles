@@ -1,8 +1,0 @@
-{
-    "@id": "_:test01",
-    "@type": "https://example.com#GeregistreerdeOrganisatie",
-    "https://example.com#GeregistreerdeOrganisatie.doorhaling": {
-        "@type": "https://example.com#Doorhaling",
-        "https://example.com#Doorhaling.redenDoorhaling": "https://example.com/concept/redenDoorhaling/fouteKBOnummer"
-    }
-}

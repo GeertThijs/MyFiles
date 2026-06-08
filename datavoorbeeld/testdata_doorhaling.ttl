@@ -1,0 +1,10 @@
+@prefix ns0: <https://example.com#GeregistreerdeOrganisatie.> .
+@prefix ns1: <https://example.com#Doorhaling.> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+  a <https://example.com#GeregistreerdeOrganisatie> ;
+  ns0:doorhaling [
+    a <https://example.com#Doorhaling> ;
+    ns1:redenDoorhaling "https://example.com/concept/redenDoorhaling/fouteKBOnummer"^^xsd:string
+  ] .
